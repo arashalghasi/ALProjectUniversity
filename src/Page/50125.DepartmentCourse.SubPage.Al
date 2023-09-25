@@ -16,11 +16,6 @@ page 50125 DepartmentCourseSubpageArash
                     ToolTip = 'Specifies the value of the ID Movie field.';
                     Caption = 'Course ID';
                 }
-                field(CourseName; Rec.CourseName)
-                {
-                    ToolTip = 'Specifies the value of the ID Movie field.';
-                    Caption = 'CourseName';
-                }
             }
         }
     }

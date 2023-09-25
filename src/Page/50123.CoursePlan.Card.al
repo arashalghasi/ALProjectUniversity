@@ -17,22 +17,40 @@ page 50123 CoursePlanCardArash
                     ApplicationArea = All;
                     Caption = 'ID';
                 }
-                field(CourseID; rec.CourseID)
+                field(CourseID; CourseID)
                 {
                     ApplicationArea = All;
                     Caption = 'Course ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        CourseTable: Record CourseTableArash;
+                    begin
+                        CourseTable.Reset();
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then
+                            CourseID := CourseTable.ID;
+                    end;
                 }
-                field(CourseName; rec.CourseName)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Course Name ';
-                }
-                field(DepartmentID; Rec.DepartmentID)
+                field(DepartmentID; DepartmentID)
                 {
                     ApplicationArea = All;
                     Caption = 'Department ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        DepartmentTable: Record DepartmentTableArash;
+                    begin
+                        DepartmentTable.Reset();
+                        if Page.RunModal(Page::DepartmentPageArash, DepartmentTable) = Action::LookupOK then
+                            DepartmentID := DepartmentTable.ID;
+                    end;
                 }
             }
         }
     }
+
+
+    var
+        CourseID: Code[20];
+        DepartmentID: Code[20];
 }

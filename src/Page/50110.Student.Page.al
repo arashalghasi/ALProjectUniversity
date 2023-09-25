@@ -26,13 +26,15 @@ page 50110 StudentPageArash
                 }
                 field(LastName; Rec.LastName)
                 {
-                    ToolTip = 'Specifies the value of the LastName field.';
                     Caption = 'Last Name';
                 }
                 field(Department; Rec.Department)
                 {
-                    ToolTip = 'Specifies the value of the LastName field.';
                     Caption = 'Department';
+                }
+                field(NumberOfCourses; Rec."Number of Courses")
+                {
+                    Caption = 'Number Of Courses';
                 }
                 field("Date of Birth"; Rec."Date of Birth")
                 {

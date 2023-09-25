@@ -13,12 +13,19 @@ table 50111 DepartmentTableArash
         {
             Caption = 'Department Name';
         }
-        field(20; "Number of Students"; Integer)
+
+        field(37; "Number of Courses"; Integer)
         {
-            Caption = 'Number of Students';
-            // trigger OnValidate()
-            // begin
-            // end;
+            fieldclass = FlowField;
+            Caption = 'Number of Courses';
+            calcformula = COUNT(CoursePlanTableArash where(DepartmentID = field(ID)));
+        }
+
+        field(38; "Number of Students"; Integer)
+        {
+            fieldclass = FlowField;
+            Caption = 'Number of Courses';
+            calcformula = COUNT(StudentTableArash where(Department = field(ID)));
         }
 
         field(30; "No Series"; Code[20])

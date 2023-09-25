@@ -15,14 +15,6 @@ table 50116 CoursePlanTableArash
             TableRelation = CourseTableArash.ID;
         }
 
-        field(15; CourseName; Text[100])
-        {
-            // editable = false;
-            fieldClass = FlowField;
-            calcformula = lookup(CourseTableArash.CourseName where(ID = field(CourseID)));
-            Caption = 'Course Name';
-        }
-
         field(20; DepartmentID; Code[20])
         {
             Caption = 'Department ID';

@@ -22,6 +22,19 @@ page 50113 DepartmentCardArash
                     ApplicationArea = All;
                     Caption = 'Department Name';
                 }
+
+
+                field(NumberOfCourses; Rec."Number of Courses")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Number Of Courses';
+                }
+
+                field(NumberOfStudents; Rec."Number of Students")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Number Of Students';
+                }
             }
 
             part("All The Courses"; DepartmentCourseSubpageArash)

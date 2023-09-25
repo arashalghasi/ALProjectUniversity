@@ -28,8 +28,9 @@ table 50110 StudentTableArash
         }
         field(37; "Number of Courses"; Integer)
         {
+            fieldclass = FlowField;
+            calcformula = COUNT(EnrolmentTableArash where(StudentId = field(ID)));
             Caption = 'Number of Courses';
-            TableRelation = DepartmentTableArash;
         }
         field(40; Email; Text[30])
         {

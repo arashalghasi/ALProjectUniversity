@@ -31,6 +31,10 @@ page 50111 StudentCardArash
                     ToolTip = 'Specifies the value of the LastName field.';
                     Caption = 'Department';
                 }
+                field(NumberOfCourses; Rec."Number of Courses")
+                {
+                    Caption = 'Number Of Courses';
+                }
                 field("Date of Birth"; Rec."Date of Birth")
                 {
                     ToolTip = 'Specifies the value of the Date of Birth field.';
