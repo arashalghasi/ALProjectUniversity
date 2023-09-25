@@ -1,10 +1,10 @@
 {
-  "id": "1d63a004-1952-4b54-bec2-01151ce7e365",
-  "name": "ALProjectUniversity",
-  "publisher": "Default publisher",
+  "id": "1d63a004-1956-4b56-bec2-01151ce7e365",
+  "name": "UniversityArash",
+  "publisher": "Arash Alghsai",
   "version": "1.0.0.0",
   "brief": "",
-  "description": "",
+  "description": "This is a mini project to learn Al language",
   "privacyStatement": "",
   "EULA": "",
   "help": "",
@@ -16,8 +16,8 @@
   "application": "22.0.0.0",
   "idRanges": [
     {
-      "from": 50100,
-      "to": 50149
+      "from": 50110,
+      "to": 50129
     }
   ],
   "resourceExposurePolicy": {
