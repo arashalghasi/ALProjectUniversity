@@ -17,15 +17,37 @@ page 50117 EnrolmentCardArash
                     ApplicationArea = All;
                     Caption = 'ID';
                 }
-                field(CourseID; rec.CourseID)
+                field(CourseID; Rec.CourseID)
                 {
                     ApplicationArea = All;
                     Caption = 'Course ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        CourseTable: Record CourseTableArash;
+                    begin
+                        CourseTable.Reset();
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
+                            Text := CourseTable.ID;
+                            exit(true);
+                        end;
+                    end;
                 }
-                field(Credits; Rec.StudentId)
+                field(StudentId; Rec.StudentId)
                 {
                     ApplicationArea = All;
-                    Caption = 'Student Id';
+                    Caption = 'Student ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        StudentTable: Record StudentTableArash;
+                    begin
+                        StudentTable.Reset();
+                        if Page.RunModal(Page::StudentPageArash, StudentTable) = Action::LookupOK then begin
+                            Text := StudentTable.ID;
+                            exit(true);
+                        end;
+                    end;
                 }
             }
         }

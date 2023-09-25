@@ -31,6 +31,17 @@ page 50110 StudentPageArash
                 field(Department; Rec.Department)
                 {
                     Caption = 'Department';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        DepartMentTable: Record DepartmentTableArash;
+                    begin
+                        DepartMentTable.Reset();
+                        if Page.RunModal(Page::DepartmentPageArash, DepartMentTable) = Action::LookupOK then begin
+                            Text := DepartMentTable.ID;
+                            exit(true);
+                        end;
+                    end;
                 }
                 field(NumberOfCourses; Rec."Number of Courses")
                 {

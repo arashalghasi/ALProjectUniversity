@@ -19,24 +19,23 @@ page 50122 CoursePlanPageArash
                     Caption = 'ID';
                 }
 
-                field(CourseID; CourseID)
+                field(CourseID; Rec.CourseID)
                 {
                     ApplicationArea = All;
                     Caption = 'Course ID';
-
 
                     trigger OnLookup(var Text: Text): Boolean
                     var
                         CourseTable: Record CourseTableArash;
                     begin
                         CourseTable.Reset();
-                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then
-                            CourseID := CourseTable.ID;
-                        Message(CourseID);
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
+                            Text := CourseTable.ID;
+                            exit(true);
+                        end;
                     end;
                 }
-
-                field(DepartmentID; DepartmentID)
+                field(DepartmentID; Rec.DepartmentID)
                 {
                     ApplicationArea = All;
                     Caption = 'Department ID';
@@ -46,14 +45,21 @@ page 50122 CoursePlanPageArash
                         DepartmentTable: Record DepartmentTableArash;
                     begin
                         DepartmentTable.Reset();
-                        if Page.RunModal(Page::DepartmentPageArash, DepartmentTable) = Action::LookupOK then
-                            DepartmentID := DepartmentTable.ID;
-                        Message(DepartmentID);
+                        if Page.RunModal(Page::DepartmentPageArash, DepartmentTable) = Action::LookupOK then begin
+                            Text := DepartmentTable.ID;
+                            exit(true);
+                        end;
                     end;
                 }
             }
         }
     }
+
+    trigger OnOpenPage()
+    begin
+        if Rec.IsEmpty() then
+            Rec.Insert();
+    end;
 
 
 

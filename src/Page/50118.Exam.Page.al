@@ -24,6 +24,17 @@ page 50118 ExamPageArash
                 {
                     ApplicationArea = All;
                     Caption = 'Course ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        CourseTable: Record CourseTableArash;
+                    begin
+                        CourseTable.Reset();
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
+                            Text := CourseTable.ID;
+                            exit(true);
+                        end;
+                    end;
                 }
 
                 field(ExamDate; Rec.ExamDate)

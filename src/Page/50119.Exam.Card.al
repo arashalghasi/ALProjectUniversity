@@ -17,10 +17,21 @@ page 50119 ExamCardArash
                     ApplicationArea = All;
                     Caption = 'ID';
                 }
-                field(CourseID; rec.CourseID)
+                field(CourseID; Rec.CourseID)
                 {
                     ApplicationArea = All;
                     Caption = 'Course ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        CourseTable: Record CourseTableArash;
+                    begin
+                        CourseTable.Reset();
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
+                            Text := CourseTable.ID;
+                            exit(true);
+                        end;
+                    end;
                 }
                 field(ExamDate; Rec.ExamDate)
                 {

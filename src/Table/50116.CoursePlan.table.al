@@ -7,16 +7,19 @@ table 50116 CoursePlanTableArash
     {
         field(1; ID; Code[20])
         {
+            DataClassification = ToBeClassified;
             Caption = 'ID';
         }
         field(10; CourseID; Code[20])
         {
+            DataClassification = ToBeClassified;
             Caption = 'Course ID';
             TableRelation = CourseTableArash.ID;
         }
 
         field(20; DepartmentID; Code[20])
         {
+            DataClassification = ToBeClassified;
             Caption = 'Department ID';
             TableRelation = DepartmentTableArash.ID;
         }

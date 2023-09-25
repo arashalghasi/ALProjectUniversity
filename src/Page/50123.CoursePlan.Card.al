@@ -17,7 +17,7 @@ page 50123 CoursePlanCardArash
                     ApplicationArea = All;
                     Caption = 'ID';
                 }
-                field(CourseID; CourseID)
+                field(CourseID; Rec.CourseID)
                 {
                     ApplicationArea = All;
                     Caption = 'Course ID';
@@ -27,11 +27,13 @@ page 50123 CoursePlanCardArash
                         CourseTable: Record CourseTableArash;
                     begin
                         CourseTable.Reset();
-                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then
-                            CourseID := CourseTable.ID;
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
+                            Text := CourseTable.ID;
+                            exit(true);
+                        end;
                     end;
                 }
-                field(DepartmentID; DepartmentID)
+                field(DepartmentID; Rec.DepartmentID)
                 {
                     ApplicationArea = All;
                     Caption = 'Department ID';
@@ -41,8 +43,10 @@ page 50123 CoursePlanCardArash
                         DepartmentTable: Record DepartmentTableArash;
                     begin
                         DepartmentTable.Reset();
-                        if Page.RunModal(Page::DepartmentPageArash, DepartmentTable) = Action::LookupOK then
-                            DepartmentID := DepartmentTable.ID;
+                        if Page.RunModal(Page::DepartmentPageArash, DepartmentTable) = Action::LookupOK then begin
+                            Text := DepartmentTable.ID;
+                            exit(true);
+                        end;
                     end;
                 }
             }
