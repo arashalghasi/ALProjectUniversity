@@ -29,6 +29,11 @@ page 50110 StudentPageArash
                     ToolTip = 'Specifies the value of the LastName field.';
                     Caption = 'Last Name';
                 }
+                field(Department; Rec.Department)
+                {
+                    ToolTip = 'Specifies the value of the LastName field.';
+                    Caption = 'Department';
+                }
                 field("Date of Birth"; Rec."Date of Birth")
                 {
                     ToolTip = 'Specifies the value of the Date of Birth field.';

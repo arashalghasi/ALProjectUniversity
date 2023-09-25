@@ -11,7 +11,14 @@ table 50111 DepartmentTableArash
         }
         field(10; DepartmentName; Text[100])
         {
-            Caption = 'Department Name Nme';
+            Caption = 'Department Name';
+        }
+        field(20; "Number of Students"; Integer)
+        {
+            Caption = 'Number of Students';
+            // trigger OnValidate()
+            // begin
+            // end;
         }
 
         field(30; "No Series"; Code[20])

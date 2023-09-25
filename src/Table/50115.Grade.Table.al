@@ -23,6 +23,10 @@ table 50115 GradeTableArash
         {
             Caption = 'Score';
         }
+        field(50; Acceptance; Boolean)
+        {
+            Caption = 'Acceptance';
+        }
         field(30; "No Series"; Code[20])
         {
             DataClassification = ToBeClassified;

@@ -21,6 +21,16 @@ table 50110 StudentTableArash
         {
             Caption = 'Date of Birth';
         }
+        field(35; Department; Code[20])
+        {
+            Caption = 'Department';
+            TableRelation = DepartmentTableArash;
+        }
+        field(37; "Number of Courses"; Integer)
+        {
+            Caption = 'Number of Courses';
+            TableRelation = DepartmentTableArash;
+        }
         field(40; Email; Text[30])
         {
             Caption = 'Email';

@@ -26,6 +26,12 @@ page 50122 CoursePlanPageArash
                     Caption = 'Course ID';
                 }
 
+                field(CourseName; Rec.CourseName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course Name';
+                }
+
                 field(DepartmentID; Rec.DepartmentID)
                 {
                     ApplicationArea = All;

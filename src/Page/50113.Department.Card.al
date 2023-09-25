@@ -23,6 +23,12 @@ page 50113 DepartmentCardArash
                     Caption = 'Department Name';
                 }
             }
+
+            part("All The Courses"; DepartmentCourseSubpageArash)
+            {
+                SubPageLink = DepartmentID = field("ID");
+                UpdatePropagation = Both;
+            }
         }
     }
 }

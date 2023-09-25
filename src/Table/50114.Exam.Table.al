@@ -18,6 +18,10 @@ table 50114 ExamTableArash
         {
             Caption = 'Exam Date';
         }
+        field(25; "Number of students"; Integer)
+        {
+            Caption = 'Number of students';
+        }
         field(40; Maximum; Integer)
         {
             Caption = 'Maximum';
