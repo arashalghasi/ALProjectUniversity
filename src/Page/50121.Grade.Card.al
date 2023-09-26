@@ -49,6 +49,12 @@ page 50121 GradeCardArash
                             exit(true);
                         end;
                     end;
+
+
+                    trigger OnValidate()
+                    begin
+
+                    end;
                 }
                 field(Score; Rec.Score)
                 {
@@ -64,4 +70,13 @@ page 50121 GradeCardArash
             }
         }
     }
+
+
+    procedure getResult(): Boolean
+    begin
+
+    end;
+
+    var
+        EnrolmentTable: Record EnrolmentTableArash;
 }

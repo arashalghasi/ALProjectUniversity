@@ -34,12 +34,13 @@ page 50116 EnrolmentPageArash
                         end;
                     end;
 
-                    // trigger OnValidate()
-                    // begin
-                    //     if (getResultDepartment()) then
-                    //         Message('Added') else
-                    //         Error('This Course is not in The department The student stuying in');
-                    // end;
+                    trigger OnValidate()
+                    begin
+                        if rec.StudentId <> '' then
+                            if (GetStudentid()) then
+                                Message('Added') else
+                                Error('This student does not study in This department ');
+                    end;
                 }
 
                 field(StudentId; Rec.StudentId)
@@ -58,29 +59,56 @@ page 50116 EnrolmentPageArash
 
                     trigger OnValidate()
                     begin
-                        if (getResultStudent()) then
-                            Message('Added') else
-                            Error('The department of this student does not have the pervoius course');
+                        if rec.CourseID <> '' then
+                            if (GetDepartmentid()) then
+                                Message('Added') else
+                                Error('The department of this student does not have the pervoius course');
                     end;
                 }
             }
         }
     }
 
-    // procedure getResultDepartment(): Boolean
-    // begin
-    //     if StudentTable.Department = CoursePlan.DepartmentID then
-    //         exit(true) else
-    //         exit(false);
-    // end;
-
-    procedure getResultStudent(): Boolean
+    procedure GetStudentid(): Boolean
+    var
+        depId: List of [Code[20]];
+        depIdStu: Code[20];
     begin
-        if rec.CourseID = CoursePlan.CourseID then
-            Message(rec.CourseID);
-        if CoursePlan.DepartmentID = rec.StudentId then
-            exit(true) else
-            exit(false);
+        StudentTable.Reset();
+        CourseTable.Reset();
+        CoursePlan.Reset();
+        StudentTable.SetRange(StudentTable.ID, rec.StudentId);
+        if StudentTable.FindFirst() then begin
+            depIdStu := StudentTable.Department;
+            CoursePlan.SetRange(CoursePlan.CourseID, rec.CourseID);
+            if CoursePlan.FindSet() then begin
+                depId.Add(CoursePlan.DepartmentID); // it the result should be a list because we have a many many relationship between course and department
+                if depId.Contains(depIdStu) then
+                    exit(true) else
+                    exit(false);
+            end;
+        end;
+    end;
+
+    procedure GetDepartmentid(): Boolean
+    var
+        depId: List of [Code[20]];
+        depIdStu: Code[20];
+    begin
+        StudentTable.Reset();
+        CourseTable.Reset();
+        CoursePlan.Reset();
+        CoursePlan.SetRange(CoursePlan.CourseID, rec.CourseID);
+        if CoursePlan.FindSet() then begin
+            depId.Add(CoursePlan.DepartmentID); // it the result should be a list because we have a many many relationship between course and department
+            StudentTable.SetRange(StudentTable.ID, rec.StudentId);
+            if StudentTable.FindFirst() then begin
+                depIdStu := StudentTable.Department;
+                if depId.Contains(depIdStu) then
+                    exit(true) else
+                    exit(false);
+            end;
+        end;
     end;
 
     var
