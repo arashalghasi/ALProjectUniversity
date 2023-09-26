@@ -1,0 +1,28 @@
+"filename", "language", "JSON", "AL", "JSON with Comments", "Markdown", "comment", "blank", "total"
+"c:\Users\Corso7\Desktop\ALProjectUniversity\.objidconfig", "JSON with Comments", 0, 0, 3, 0, 1, 0, 4
+"c:\Users\Corso7\Desktop\ALProjectUniversity\README.md", "Markdown", 0, 0, 0, 3, 0, 1, 4
+"c:\Users\Corso7\Desktop\ALProjectUniversity\app.json", "JSON", 32, 0, 0, 0, 0, 0, 32
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50110.Student.Page.al", "AL", 0, 65, 0, 0, 0, 3, 68
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50111.Student.Card.al", "AL", 0, 69, 0, 0, 0, 3, 72
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50112.Department.page.al", "AL", 0, 38, 0, 0, 0, 4, 42
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50113.Department.Card.al", "AL", 0, 42, 0, 0, 5, 6, 53
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50114.Course.Page.al", "AL", 0, 33, 0, 0, 0, 4, 37
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50115.Course.Card.al", "AL", 0, 32, 0, 0, 0, 1, 33
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50116.Enrolment.Page.al", "AL", 0, 112, 0, 0, 0, 11, 123
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50117.Enrolment.Card.al", "AL", 0, 110, 0, 0, 0, 11, 121
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50118.Exam.Page.al", "AL", 0, 48, 0, 0, 0, 6, 54
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50119.Exam.Card.al", "AL", 0, 47, 0, 0, 0, 2, 49
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50120.Grade.page.al", "AL", 0, 125, 0, 0, 0, 15, 140
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50121.Grade.Card.al", "AL", 0, 121, 0, 0, 0, 12, 133
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50122.CoursePlan.Page.al", "AL", 0, 61, 0, 0, 0, 8, 69
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50123.CoursePlan.Card.al", "AL", 0, 55, 0, 0, 0, 5, 60
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50124.StudentCourse.SubPage.al", "AL", 0, 31, 0, 0, 0, 3, 34
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Page\50126.DepartmentStudent.SubPage.al", "AL", 0, 31, 0, 0, 0, 3, 34
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50110.Student.Table.al", "AL", 0, 65, 0, 0, 0, 3, 68
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50111.Department.Table.al", "AL", 0, 50, 0, 0, 0, 6, 56
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50112.Course.Table.al", "AL", 0, 42, 0, 0, 0, 4, 46
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50113.Enrolment.Table.al", "AL", 0, 48, 0, 0, 0, 7, 55
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50114.Exam.Table.al", "AL", 0, 51, 0, 0, 0, 4, 55
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50115.Grade.Table.al", "AL", 0, 52, 0, 0, 0, 4, 56
+"c:\Users\Corso7\Desktop\ALProjectUniversity\src\Table\50116.CoursePlan.table.al", "AL", 0, 51, 0, 0, 0, 6, 57
+"Total", "-", 32, 1379, 3, 3, 6, 132, 1555
