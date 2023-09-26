@@ -15,8 +15,20 @@ page 50124 StudentCourseSubpageArash
                 {
                     ToolTip = 'Specifies the value of the ID Movie field.';
                     Caption = 'Course ID';
+
+                    trigger OnLookup(var Text: Text): Boolean
+                    var
+                        CourseTable: Record CourseTableArash;
+                    begin
+                        CourseTable.Reset();
+                        if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
+                            Text := CourseTable.ID;
+                            exit(true);
+                        end;
+                    end;
                 }
             }
         }
     }
+
 }

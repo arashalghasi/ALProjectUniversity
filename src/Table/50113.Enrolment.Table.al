@@ -19,6 +19,7 @@ table 50113 EnrolmentTableArash
             Caption = 'Student Id';
             TableRelation = StudentTableArash.ID;
         }
+
         field(30; "No Series"; Code[20])
         {
             DataClassification = ToBeClassified;
@@ -27,6 +28,7 @@ table 50113 EnrolmentTableArash
             Editable = false;
         }
     }
+
     keys
     {
         key(PK; ID)

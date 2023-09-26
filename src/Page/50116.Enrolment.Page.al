@@ -26,15 +26,20 @@ page 50116 EnrolmentPageArash
                     Caption = 'Course ID';
 
                     trigger OnLookup(var Text: Text): Boolean
-                    var
-                        CourseTable: Record CourseTableArash;
                     begin
                         CourseTable.Reset();
                         if Page.RunModal(Page::CoursePageArash, CourseTable) = Action::LookupOK then begin
                             Text := CourseTable.ID;
-                            exit(true);
+                            exit(true)
                         end;
                     end;
+
+                    // trigger OnValidate()
+                    // begin
+                    //     if (getResultDepartment()) then
+                    //         Message('Added') else
+                    //         Error('This Course is not in The department The student stuying in');
+                    // end;
                 }
 
                 field(StudentId; Rec.StudentId)
@@ -43,17 +48,43 @@ page 50116 EnrolmentPageArash
                     Caption = 'Student ID';
 
                     trigger OnLookup(var Text: Text): Boolean
-                    var
-                        StudentTable: Record StudentTableArash;
                     begin
                         StudentTable.Reset();
                         if Page.RunModal(Page::StudentPageArash, StudentTable) = Action::LookupOK then begin
                             Text := StudentTable.ID;
-                            exit(true);
+                            exit(true)
                         end;
+                    end;
+
+                    trigger OnValidate()
+                    begin
+                        if (getResultStudent()) then
+                            Message('Added') else
+                            Error('The department of this student does not have the pervoius course');
                     end;
                 }
             }
         }
     }
+
+    // procedure getResultDepartment(): Boolean
+    // begin
+    //     if StudentTable.Department = CoursePlan.DepartmentID then
+    //         exit(true) else
+    //         exit(false);
+    // end;
+
+    procedure getResultStudent(): Boolean
+    begin
+        if rec.CourseID = CoursePlan.CourseID then
+            Message(rec.CourseID);
+        if CoursePlan.DepartmentID = rec.StudentId then
+            exit(true) else
+            exit(false);
+    end;
+
+    var
+        StudentTable: Record StudentTableArash;
+        CourseTable: Record CourseTableArash;
+        CoursePlan: Record CoursePlanTableArash;
 }

@@ -17,7 +17,6 @@ page 50112 DepartmentPageArash
                 {
                     ApplicationArea = All;
                     Caption = 'ID';
-
                 }
 
                 field(FacultyName; Rec.DepartmentName)

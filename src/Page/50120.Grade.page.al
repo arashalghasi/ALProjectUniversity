@@ -59,6 +59,14 @@ page 50120 GradePageArash
                     ApplicationArea = All;
                     Caption = 'Score';
                 }
+
+                field(Acceptance; Rec.Acceptance)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Acceptance';
+                }
+
+
             }
         }
     }

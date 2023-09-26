@@ -55,6 +55,12 @@ page 50121 GradeCardArash
                     ApplicationArea = All;
                     Caption = 'Score';
                 }
+
+                field(Acceptance; Rec.Acceptance)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Acceptance';
+                }
             }
         }
     }

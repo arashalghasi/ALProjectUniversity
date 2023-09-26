@@ -37,11 +37,17 @@ page 50113 DepartmentCardArash
                 }
             }
 
-            part("All The Courses"; DepartmentCourseSubpageArash)
+            part("All of The Courses"; DepartmentCourseSubpageArash)
             {
                 SubPageLink = DepartmentID = field("ID");
                 UpdatePropagation = Both;
             }
+
+            // part("All of The Students"; DepartmentStudentSubpageArash)
+            // {
+            //     SubPageLink = Department = field("ID");
+            //     UpdatePropagation = Both;
+            // }
         }
     }
 }
