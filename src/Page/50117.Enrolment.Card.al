@@ -79,7 +79,9 @@ page 50117 EnrolmentCardArash
             depIdStu := StudentTable.Department;
             CoursePlan.SetRange(CoursePlan.CourseID, rec.CourseID);
             if CoursePlan.FindSet() then begin
-                depId.Add(CoursePlan.DepartmentID); // it the result should be a list because we have a many many relationship between course and department
+                REPEAT
+                    depId.Add(CoursePlan.DepartmentID);
+                UNTIL CoursePlan.NEXT = 0;
                 if depId.Contains(depIdStu) then
                     exit(true) else
                     exit(false);
@@ -97,7 +99,9 @@ page 50117 EnrolmentCardArash
         CoursePlan.Reset();
         CoursePlan.SetRange(CoursePlan.CourseID, rec.CourseID);
         if CoursePlan.FindSet() then begin
-            depId.Add(CoursePlan.DepartmentID); // it the result should be a list because we have a many many relationship between course and department
+            REPEAT
+                depId.Add(CoursePlan.DepartmentID)
+UNTIL CoursePlan.NEXT = 0;
             StudentTable.SetRange(StudentTable.ID, rec.StudentId);
             if StudentTable.FindFirst() then begin
                 depIdStu := StudentTable.Department;
