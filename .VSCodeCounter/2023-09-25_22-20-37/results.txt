@@ -1,0 +1,54 @@
+Date : 2023-09-25 22:20:37
+Directory : c:\Users\arash\Desktop\ProjectUniversity
+Total : 24 files,  1125 codes, 0 comments, 96 blanks, all 1221 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| AL       |         22 |      1,090 |          0 |         95 |      1,185 |
+| JSON     |          1 |         32 |          0 |          0 |         32 |
+| Markdown |          1 |          3 |          0 |          1 |          4 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                |         24 |      1,125 |          0 |         96 |      1,221 |
+| . (Files)                                                                        |          2 |         35 |          0 |          1 |         36 |
+| src                                                                              |         22 |      1,090 |          0 |         95 |      1,185 |
+| src\Page                                                                         |         15 |        731 |          0 |         63 |        794 |
+| src\Table                                                                        |          7 |        359 |          0 |         32 |        391 |
++----------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                         | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\arash\Desktop\ProjectUniversity\README.md                               | Markdown |          3 |          0 |          1 |          4 |
+| c:\Users\arash\Desktop\ProjectUniversity\app.json                                | JSON     |         32 |          0 |          0 |         32 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50110.Student.Page.al          | AL       |         65 |          0 |          3 |         68 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50111.Student.Card.al          | AL       |         69 |          0 |          3 |         72 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50112.Department.page.al       | AL       |         38 |          0 |          5 |         43 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50113.Department.Card.al       | AL       |         42 |          0 |          5 |         47 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50114.Course.Page.al           | AL       |         33 |          0 |          4 |         37 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50115.Course.Card.al           | AL       |         32 |          0 |          1 |         33 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50116.Enrolment.Page.al        | AL       |         53 |          0 |          6 |         59 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50117.Enrolment.Card.al        | AL       |         52 |          0 |          3 |         55 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50118.Exam.Page.al             | AL       |         48 |          0 |          6 |         54 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50119.Exam.Card.al             | AL       |         47 |          0 |          2 |         49 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50120.Grade.page.al            | AL       |         58 |          0 |          7 |         65 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50121.Grade.Card.al            | AL       |         57 |          0 |          4 |         61 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50122.CoursePlan.Page.al       | AL       |         61 |          0 |          8 |         69 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50123.CoursePlan.Card.al       | AL       |         55 |          0 |          5 |         60 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Page\50124.StudentCourse.SubPage.al | AL       |         21 |          0 |          1 |         22 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50110.Student.Table.al        | AL       |         65 |          0 |          3 |         68 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50111.Department.Table.al     | AL       |         50 |          0 |          6 |         56 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50112.Course.Table.al         | AL       |         42 |          0 |          4 |         46 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50113.Enrolment.Table.al      | AL       |         48 |          0 |          5 |         53 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50114.Exam.Table.al           | AL       |         51 |          0 |          4 |         55 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50115.Grade.Table.al          | AL       |         52 |          0 |          4 |         56 |
+| c:\Users\arash\Desktop\ProjectUniversity\src\Table\50116.CoursePlan.table.al     | AL       |         51 |          0 |          6 |         57 |
+| Total                                                                            |          |      1,125 |          0 |         96 |      1,221 |
++----------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

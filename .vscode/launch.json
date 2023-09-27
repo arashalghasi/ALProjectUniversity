@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "VarPrime Academy 2023 SandBox",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Varprime_SB_Academy",
+            "schemaUpdateMode": "Synchronize",
+            "breakOnError": true,
+            "startupObjectId": 50122,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "333268c8-504e-496b-b899-0d6e9d434c02"
+        }
+    ]
+}
