@@ -3,7 +3,7 @@ page 50126 DepartmentStudentSubpageArash
     PageType = ListPart;
     ApplicationArea = All;
     SourceTable = StudentTableArash;
-    Caption = 'All the courses of the Department';
+    Caption = 'All the courses and students of of the Department';
 
     layout
     {
@@ -32,15 +32,16 @@ page 50126 DepartmentStudentSubpageArash
                 field(StudentFirstName; Rec.FirstName)
                 {
                     ApplicationArea = All;
-                    Caption = 'Student Name';
+                    Caption = 'Student first Name';
                 }
 
                 field(StudentLastName; Rec.LastName)
                 {
                     ApplicationArea = All;
-                    Caption = 'Student Name';
+                    Caption = 'Student last Name';
                 }
             }
         }
     }
 }
+

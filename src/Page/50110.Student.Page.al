@@ -27,6 +27,12 @@ page 50110 StudentPageArash
                 {
                     Caption = 'Last Name';
                 }
+
+                field(FullName; FullNameCal())
+                {
+                    Caption = 'Full Name';
+                    Editable = false;
+                }
                 field(Department; Rec.Department)
                 {
                     Caption = 'Department';
@@ -42,7 +48,6 @@ page 50110 StudentPageArash
                         end;
                     end;
                 }
-
                 field(DepartmentName; Rec.DepartmentName)
                 {
                     Caption = 'Department Name';
@@ -63,8 +68,12 @@ page 50110 StudentPageArash
                 }
                 field(Phone; Rec.Phone)
                 {
-                    ToolTip = 'Specifies the value of the Phone field.';
                     Caption = 'Phone';
+                }
+
+                field(Gender; Rec.Gender)
+                {
+                    Caption = 'Gender';
                 }
             }
         }
@@ -197,4 +206,36 @@ page 50110 StudentPageArash
 
         }
     }
+
+
+    procedure FullNameCal(): Text
+    var
+        StudentTable: Record StudentTableArash;
+        Gender: Enum GenderArash;
+        FullName: Text[100];
+    begin
+        StudentTable.Reset();
+
+        if (StudentTable.Find('-')) then begin
+            REPEAT
+                if (StudentTable.ID = rec.ID) then begin
+
+                    if StudentTable.Gender = Gender::Man then begin
+                        FullName := 'Mr. ' + rec.FirstName + ' ' + rec.LastName;
+                        exit(FullName);
+                    end;
+                    if StudentTable.Gender = Gender::Woman then begin
+                        FullName := 'Mrs. ' + rec.FirstName + ' ' + rec.LastName;
+                        exit(FullName);
+                    end;
+                    if StudentTable.Gender = Gender::Other then begin
+                        FullName := 'X. ' + rec.FirstName + ' ' + rec.LastName;
+                        exit(FullName);
+                    end;
+                end;
+            UNTIL StudentTable.NEXT = 0;
+        end;
+    end;
+
+
 }

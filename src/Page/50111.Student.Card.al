@@ -26,6 +26,11 @@ page 50111 StudentCardArash
                     ToolTip = 'Specifies the value of the Last Name field.';
                     Caption = 'Last Name';
                 }
+                field(FullName; FullNameCal())
+                {
+                    Caption = 'Full Name';
+                    Editable = false;
+                }
                 field(Department; Rec.Department)
                 {
                     Caption = 'Department';
@@ -51,18 +56,19 @@ page 50111 StudentCardArash
                 }
                 field("Date of Birth"; Rec."Date of Birth")
                 {
-                    ToolTip = 'Specifies the value of the Date of Birth field.';
                     Caption = 'Date of Birth';
                 }
                 field(Email; Rec.Email)
                 {
-                    ToolTip = 'Specifies the value of the Email field.';
                     Caption = 'Email';
                 }
                 field(Phone; Rec.Phone)
                 {
-                    ToolTip = 'Specifies the value of the Phone field.';
                     Caption = 'Phone';
+                }
+                field(Gender; Rec.Gender)
+                {
+                    Caption = 'Gender';
                 }
             }
 
@@ -73,4 +79,33 @@ page 50111 StudentCardArash
             }
         }
     }
+
+    procedure FullNameCal(): Text
+    var
+        StudentTable: Record StudentTableArash;
+        Gender: Enum GenderArash;
+        FullName: Text[100];
+    begin
+        StudentTable.Reset();
+
+        if (StudentTable.Find('-')) then begin
+            REPEAT
+                if (StudentTable.ID = rec.ID) then begin
+
+                    if StudentTable.Gender = Gender::Man then begin
+                        FullName := 'Mr. ' + rec.FirstName + ' ' + rec.LastName;
+                        exit(FullName);
+                    end;
+                    if StudentTable.Gender = Gender::Woman then begin
+                        FullName := 'Mrs. ' + rec.FirstName + ' ' + rec.LastName;
+                        exit(FullName);
+                    end;
+                    if StudentTable.Gender = Gender::Other then begin
+                        FullName := 'X. ' + rec.FirstName + ' ' + rec.LastName;
+                        exit(FullName);
+                    end;
+                end;
+            UNTIL StudentTable.NEXT = 0;
+        end;
+    end;
 }

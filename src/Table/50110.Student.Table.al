@@ -47,6 +47,10 @@ table 50110 StudentTableArash
         {
             Caption = 'Phone';
         }
+        field(60; Gender; enum GenderArash)
+        {
+            Caption = 'Gender';
+        }
         field(70; "No Series"; Code[20])
         {
             DataClassification = ToBeClassified;
@@ -71,9 +75,4 @@ table 50110 StudentTableArash
             NoSerieManagement.InitSeries('STUARASH', xRec."No Series", 0D, ID, "No Series");
         end;
     end;
-
-    // trigger OnModify()
-    // begin
-    //     FirstName := '';
-    // end;
 }

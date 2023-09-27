@@ -27,13 +27,14 @@ page 50124 StudentCourseSubpageArash
                         end;
                     end;
                 }
+                field(CourseName; Rec.CourseName)
+                {
+                    ToolTip = 'Specifies the value of the Name Movie field.';
+                    Caption = 'Course Name';
+                }
             }
 
-            field(CourseName; Rec.CourseName)
-            {
-                ToolTip = 'Specifies the value of the Name Movie field.';
-                Caption = 'Course Name';
-            }
+
         }
     }
 
