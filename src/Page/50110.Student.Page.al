@@ -32,6 +32,7 @@ page 50110 StudentPageArash
                 {
                     Caption = 'Full Name';
                     Editable = false;
+                    Style = Strong;
                 }
                 field(Department; Rec.Department)
                 {
