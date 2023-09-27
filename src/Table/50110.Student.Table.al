@@ -26,6 +26,13 @@ table 50110 StudentTableArash
             Caption = 'Department';
             TableRelation = DepartmentTableArash;
         }
+        field(36; DepartmentName; Text[100])
+        {
+            Caption = 'Department Name';
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = lookup(DepartmentTableArash.DepartmentName where(Id = field(Department)));
+        }
         field(37; "Number of Courses"; Integer)
         {
             fieldclass = FlowField;
@@ -64,4 +71,9 @@ table 50110 StudentTableArash
             NoSerieManagement.InitSeries('STUARASH', xRec."No Series", 0D, ID, "No Series");
         end;
     end;
+
+    // trigger OnModify()
+    // begin
+    //     FirstName := '';
+    // end;
 }

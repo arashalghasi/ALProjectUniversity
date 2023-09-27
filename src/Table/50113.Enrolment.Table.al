@@ -14,10 +14,24 @@ table 50113 EnrolmentTableArash
             Caption = 'Course ID';
             TableRelation = CourseTableArash.ID;
         }
+        field(15; CourseName; Text[100])
+        {
+            FieldClass = FlowField;
+            Editable = false;
+            Caption = 'Department Name';
+            CalcFormula = lookup(CourseTableArash.CourseName where(ID = field(CourseID)));
+        }
         field(20; StudentId; Code[20])
         {
             Caption = 'Student Id';
             TableRelation = StudentTableArash.ID;
+        }
+        field(25; studentName; Text[100])
+        {
+            FieldClass = FlowField;
+            Editable = false;
+            Caption = 'Student last Name';
+            CalcFormula = lookup(StudentTableArash.LastName where(ID = field(StudentId)));
         }
 
         field(30; "No Series"; Code[20])

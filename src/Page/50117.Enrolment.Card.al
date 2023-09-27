@@ -40,6 +40,12 @@ page 50117 EnrolmentCardArash
                     end;
                 }
 
+                field(CourseName; Rec.CourseName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course Name';
+                }
+
                 field(StudentId; Rec.StudentId)
                 {
                     ApplicationArea = All;
@@ -61,6 +67,13 @@ page 50117 EnrolmentCardArash
                                 Message('Added') else
                                 Error('The department of this student does not have the pervoius course');
                     end;
+                }
+
+
+                field(studentName; Rec.studentName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Student last Name';
                 }
             }
         }

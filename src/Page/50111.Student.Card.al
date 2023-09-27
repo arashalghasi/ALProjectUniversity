@@ -41,6 +41,10 @@ page 50111 StudentCardArash
                         end;
                     end;
                 }
+                field(DepartmentName; Rec.DepartmentName)
+                {
+                    Caption = 'Department Name';
+                }
                 field(NumberOfCourses; Rec."Number of Courses")
                 {
                     Caption = 'Number Of Courses';

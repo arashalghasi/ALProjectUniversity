@@ -27,11 +27,11 @@ page 50125 DepartmentCourseSubpageArash
                     end;
                 }
 
-                // field(CourseName; CourseName)
-                // {
-                //     ToolTip = 'Specifies the value of the Name Movie field.';
-                //     Caption = 'Course Name';
-                // }
+                field(CourseName; Rec.CourseName)
+                {
+                    ToolTip = 'Specifies the value of the Name Movie field.';
+                    Caption = 'Course Name';
+                }
 
             }
         }

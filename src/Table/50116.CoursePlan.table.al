@@ -17,12 +17,24 @@ table 50116 CoursePlanTableArash
             TableRelation = CourseTableArash.ID;
         }
 
+        field(40; CourseName; Text[100])
+        {
+            FieldClass = FlowField;
+            Editable = false;
+            Caption = 'Department ID';
+            CalcFormula = lookup(CourseTableArash.CourseName where(ID = field(CourseID)));
+        }
+
         field(20; DepartmentID; Code[20])
         {
             DataClassification = ToBeClassified;
             Caption = 'Department ID';
             TableRelation = DepartmentTableArash.ID;
         }
+
+
+
+
         field(30; "No Series"; Code[20])
         {
             DataClassification = ToBeClassified;

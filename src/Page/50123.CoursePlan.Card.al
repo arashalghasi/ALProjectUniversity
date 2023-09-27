@@ -33,6 +33,12 @@ page 50123 CoursePlanCardArash
                         end;
                     end;
                 }
+
+                field(courseName; Rec.courseName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course Name';
+                }
                 field(DepartmentID; Rec.DepartmentID)
                 {
                     ApplicationArea = All;

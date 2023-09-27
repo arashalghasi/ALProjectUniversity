@@ -28,6 +28,18 @@ page 50126 DepartmentStudentSubpageArash
                         end;
                     end;
                 }
+
+                field(StudentFirstName; Rec.FirstName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Student Name';
+                }
+
+                field(StudentLastName; Rec.LastName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Student Name';
+                }
             }
         }
     }

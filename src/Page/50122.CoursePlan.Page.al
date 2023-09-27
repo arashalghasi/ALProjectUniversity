@@ -35,6 +35,13 @@ page 50122 CoursePlanPageArash
                         end;
                     end;
                 }
+
+                field(courseName; Rec.courseName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course Name';
+                }
+
                 field(DepartmentID; Rec.DepartmentID)
                 {
                     ApplicationArea = All;
