@@ -4,7 +4,7 @@ page 50112 DepartmentPageArash
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = DepartmentTableArash;
-    Caption = 'DepartmentPage Arash';
+    Caption = 'Department Page';
     CardPageId = DepartmentCardArash;
 
     layout

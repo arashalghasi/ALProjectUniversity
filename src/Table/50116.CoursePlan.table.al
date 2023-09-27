@@ -1,6 +1,6 @@
 table 50116 CoursePlanTableArash
 {
-    Caption = 'Course Plan Table Arash';
+    Caption = 'Course Plan Table';
     DataClassification = ToBeClassified;
 
     fields

@@ -9,7 +9,7 @@ page 50111 StudentCardArash
     {
         area(Content)
         {
-            group(GroupName)
+            group(General)
             {
                 field(ID; rec.ID)
                 {
@@ -72,10 +72,61 @@ page 50111 StudentCardArash
                 }
             }
 
-            part("All The Courses"; StudentCourseSubpageArash)
+
+            group(Courses)
             {
-                SubPageLink = StudentId = field("ID");
-                UpdatePropagation = Both;
+                part("All The Courses"; StudentCourseSubpageArash)
+                {
+                    SubPageLink = StudentId = field("ID");
+                    UpdatePropagation = Both;
+                }
+            }
+            group(fiends)
+            {
+                field(ID2; rec.ID)
+                {
+                    ApplicationArea = All;
+                    Caption = 'ID';
+                }
+            }
+            group(Administration)
+            {
+                field(ID3; rec.ID)
+                {
+                    ApplicationArea = All;
+                    Caption = 'ID';
+                }
+            }
+            group(Payment)
+            {
+                field(ID4; rec.ID)
+                {
+                    ApplicationArea = All;
+                    Caption = 'ID';
+                }
+            }
+
+        }
+        area(factboxes)
+        {
+            part(Control3; "Employee Picture")
+            {
+                ApplicationArea = BasicHR;
+            }
+            part("Attached Documents"; "Document Attachment Factbox")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments';
+            }
+            systempart(Control1900383207; Links)
+            {
+                ApplicationArea = RecordLinks;
+                Visible = false;
+            }
+            systempart(Control1905767507; Notes)
+            {
+                ApplicationArea = Notes;
+                Visible = true;
             }
         }
     }

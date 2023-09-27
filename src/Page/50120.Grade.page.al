@@ -4,7 +4,7 @@ page 50120 GradePageArash
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = GradeTableArash;
-    Caption = 'Grade Page Arash';
+    Caption = 'Grade Page';
     CardPageId = GradeCardArash;
 
     layout

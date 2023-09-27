@@ -1,6 +1,6 @@
 table 50115 GradeTableArash
 {
-    Caption = 'Grade Table Arash';
+    Caption = 'Grade Table';
     DataClassification = ToBeClassified;
 
     fields

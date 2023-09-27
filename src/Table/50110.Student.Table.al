@@ -1,6 +1,6 @@
 table 50110 StudentTableArash
 {
-    Caption = 'Student Table Arash';
+    Caption = 'Student Table';
     DataClassification = ToBeClassified;
 
     fields

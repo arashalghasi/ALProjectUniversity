@@ -4,7 +4,7 @@ page 50119 ExamCardArash
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = ExamTableArash;
-    Caption = 'Exam Card Arash';
+    Caption = 'Exam Card';
 
     layout
     {

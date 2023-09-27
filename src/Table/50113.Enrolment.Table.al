@@ -1,6 +1,6 @@
 table 50113 EnrolmentTableArash
 {
-    Caption = 'Enrolment Table Arash';
+    Caption = 'Enrolment Table';
     DataClassification = ToBeClassified;
 
     fields

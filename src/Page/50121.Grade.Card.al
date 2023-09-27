@@ -4,7 +4,7 @@ page 50121 GradeCardArash
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = GradeTableArash;
-    Caption = 'Grade Card Arash';
+    Caption = 'Grade Card';
 
     layout
     {

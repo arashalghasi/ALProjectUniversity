@@ -4,7 +4,7 @@ page 50122 CoursePlanPageArash
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = CoursePlanTableArash;
-    Caption = 'CoursePlan Page Arash';
+    Caption = 'CoursePlan Page';
     CardPageId = CoursePlanCardArash;
 
     layout

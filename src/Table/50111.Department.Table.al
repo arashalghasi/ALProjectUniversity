@@ -1,6 +1,6 @@
 table 50111 DepartmentTableArash
 {
-    Caption = 'Department Table Arash';
+    Caption = 'Department Table';
     DataClassification = ToBeClassified;
 
     fields

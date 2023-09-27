@@ -4,7 +4,7 @@ page 50113 DepartmentCardArash
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = DepartmentTableArash;
-    Caption = 'Department Card Arash';
+    Caption = 'Department Card';
 
     layout
     {

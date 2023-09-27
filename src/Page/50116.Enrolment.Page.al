@@ -4,7 +4,7 @@ page 50116 EnrolmentPageArash
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = EnrolmentTableArash;
-    Caption = 'Enrolment Page Arash';
+    Caption = 'Enrolment Page';
     CardPageId = EnrolmentCardArash;
 
     layout

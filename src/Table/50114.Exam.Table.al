@@ -1,6 +1,6 @@
 table 50114 ExamTableArash
 {
-    Caption = 'Exam Table Arash';
+    Caption = 'Exam Table';
     DataClassification = ToBeClassified;
 
     fields

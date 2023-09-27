@@ -4,7 +4,7 @@ page 50118 ExamPageArash
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = ExamTableArash;
-    Caption = 'Exam Page Arash';
+    Caption = 'Exam Page';
     CardPageId = ExamCardArash;
 
     layout

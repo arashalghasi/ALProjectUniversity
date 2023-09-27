@@ -4,7 +4,7 @@ page 50115 CourseCardArash
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = CourseTableArash;
-    Caption = 'Course Card Arash';
+    Caption = 'Course Card';
 
     layout
     {

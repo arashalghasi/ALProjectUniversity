@@ -4,7 +4,7 @@ page 50117 EnrolmentCardArash
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = EnrolmentTableArash;
-    Caption = 'Enrolment Card Arash';
+    Caption = 'Enrolment Card';
 
     layout
     {

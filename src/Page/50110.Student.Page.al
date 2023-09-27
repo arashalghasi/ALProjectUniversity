@@ -4,7 +4,7 @@ page 50110 StudentPageArash
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = StudentTableArash;
-    Caption = 'Student Page Arash';
+    Caption = 'Student Page';
     CardPageId = StudentCardArash;
 
     layout
