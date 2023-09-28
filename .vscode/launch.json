@@ -9,7 +9,7 @@
             "environmentName": "Varprime_SB_Academy",
             "schemaUpdateMode": "Synchronize",
             "breakOnError": true,
-            "startupObjectId": 50127,
+            "startupObjectId": 50110,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,

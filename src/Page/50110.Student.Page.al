@@ -118,6 +118,42 @@ page 50110 StudentPageArash
                     end;
                 end;
             }
+
+
+            //non funziona bene perche non ho creato il field in tabella perche a me non mi interessa avere le ridondanze
+            //E vorrei calcolare il full name in page per none salvare il fullname in database. invece ancora ho usato il
+            // valore che ho salvato in  "General Ledger Setup" ma in modo di un procedure!!!
+
+            // action(GiveTitle)
+            // {
+            //     Caption = 'Give Title to the person';
+            //     trigger OnAction()
+            //     var
+            //         StudentTable: Record StudentTableArash;
+            //         MyGeneralLedgerSetup: Record "General Ledger Setup";
+            //         MyMessage: label 'Added!';
+            //         gender: Enum GenderArash;
+            //         FullNameAction: Text[200];
+            //     begin
+            //         MyGeneralLedgerSetup.Get();
+            //         StudentTable.Reset();
+            //         if StudentTable.find('-') then begin
+            //             repeat
+            //                 if StudentTable.Gender = Gender::Man then
+            //                     FullNameAction := MyGeneralLedgerSetup.malePrefixArash + ' ' + StudentTable.FirstName + ' ' + StudentTable.LastName;
+            //                 exit;
+            //                 if StudentTable.Gender = Gender::Woman then
+            //                     FullNameAction := MyGeneralLedgerSetup.femalePrefixArash + ' ' + StudentTable.FirstName + ' ' + StudentTable.LastName;
+            //                 exit;
+            //                 if StudentTable.Gender = Gender::Other then
+            //                     FullNameAction := MyGeneralLedgerSetup.OtherPrefixArash + ' ' + StudentTable.FirstName + ' ' + StudentTable.LastName;
+            //                 exit;
+            //             until StudentTable.Next() = 0;
+            //         end;
+
+            //         Message(MyMessage);
+            //     end;
+            // }
         }
 
         area(Creation)
@@ -214,29 +250,29 @@ page 50110 StudentPageArash
         StudentTable: Record StudentTableArash;
         Gender: Enum GenderArash;
         FullName: Text[100];
+        GeneralLedgerSetup: Record "General Ledger Setup";
     begin
         StudentTable.Reset();
-
+        GeneralLedgerSetup.Get();
         if (StudentTable.Find('-')) then begin
             REPEAT
                 if (StudentTable.ID = rec.ID) then begin
 
                     if StudentTable.Gender = Gender::Man then begin
-                        FullName := 'Mr. ' + rec.FirstName + ' ' + rec.LastName;
+                        FullName := GeneralLedgerSetup.malePrefixArash + ' ' + rec.FirstName + ' ' + rec.LastName;
                         exit(FullName);
                     end;
                     if StudentTable.Gender = Gender::Woman then begin
-                        FullName := 'Mrs. ' + rec.FirstName + ' ' + rec.LastName;
+                        FullName := GeneralLedgerSetup.femalePrefixArash + ' ' + rec.FirstName + ' ' + rec.LastName;
                         exit(FullName);
                     end;
                     if StudentTable.Gender = Gender::Other then begin
-                        FullName := 'X. ' + rec.FirstName + ' ' + rec.LastName;
+                        FullName := GeneralLedgerSetup.OtherPrefixArash + ' ' + rec.FirstName + ' ' + rec.LastName;
                         exit(FullName);
                     end;
                 end;
             UNTIL StudentTable.NEXT = 0;
         end;
     end;
-
 
 }

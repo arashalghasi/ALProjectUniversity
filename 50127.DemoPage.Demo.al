@@ -1,6 +1,6 @@
 page 50127 DemoPageArash
 {
-    Caption = 'Demo';
+    Caption = 'Demo Render HTML';
 
     layout
     {
