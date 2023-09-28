@@ -81,29 +81,21 @@ page 50111 StudentCardArash
                     UpdatePropagation = Both;
                 }
             }
-            group(fiends)
+            group(Exams)
             {
-                field(ID2; rec.ID)
+                part("All The Exams"; StudentExamSubpageArash)
                 {
-                    ApplicationArea = All;
-                    Caption = 'ID';
+                    SubPageLink = StudentId = field("ID");
+                    UpdatePropagation = Both;
                 }
             }
             group(Administration)
             {
-                field(ID3; rec.ID)
-                {
-                    ApplicationArea = All;
-                    Caption = 'ID';
-                }
+
             }
             group(Payment)
             {
-                field(ID4; rec.ID)
-                {
-                    ApplicationArea = All;
-                    Caption = 'ID';
-                }
+
             }
 
         }

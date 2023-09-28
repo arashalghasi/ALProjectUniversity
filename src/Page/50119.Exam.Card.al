@@ -33,6 +33,12 @@ page 50119 ExamCardArash
                         end;
                     end;
                 }
+
+                field(CourseName; Rec.CourseName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course Name';
+                }
                 field(ExamDate; Rec.ExamDate)
                 {
                     ApplicationArea = All;

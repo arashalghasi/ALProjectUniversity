@@ -14,11 +14,38 @@ table 50115 GradeTableArash
             Caption = 'Student ID';
             TableRelation = StudentTableArash.ID;
         }
+        field(15; StudentName; Text[100])
+        {
+            FieldClass = FlowField;
+            Caption = 'Student Name';
+            CalcFormula = lookup(StudentTableArash.LastName where(ID = field(StudentId)));
+        }
         field(20; ExamId; Code[20])
         {
             Caption = 'Exam Date';
             TableRelation = ExamTableArash.ID;
         }
+        field(25; ExamDate; Date)
+        {
+            FieldClass = FlowField;
+            Caption = 'Exam Date';
+            CalcFormula = lookup(ExamTableArash.ExamDate where(ID = field(ExamId)));
+        }
+
+        field(26; CourseID; Code[20])
+        {
+            FieldClass = FlowField;
+            Caption = 'Course ID';
+            CalcFormula = lookup(ExamTableArash.CourseID where(ID = field(ExamId)));
+        }
+
+        field(27; CourseName; Text[100])
+        {
+            FieldClass = FlowField;
+            Caption = 'Exam Course';
+            CalcFormula = lookup(ExamTableArash.CourseName where(ID = field(ExamId)));
+        }
+
         field(40; Score; Integer)
         {
             Caption = 'Score';
@@ -40,6 +67,10 @@ table 50115 GradeTableArash
         key(PK; ID)
         {
             Clustered = true;
+        }
+        key(SK; StudentId, ExamId)
+        {
+            Clustered = false;
         }
     }
 

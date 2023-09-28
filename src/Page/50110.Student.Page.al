@@ -119,6 +119,29 @@ page 50110 StudentPageArash
                 end;
             }
 
+            action(LongestLastName)
+            {
+                Caption = 'Longest Last Name';
+                trigger OnAction()
+                var
+                    StudentTable: Record StudentTableArash;
+                    id: Code[20];
+                    lastNameInt: integer;
+                    lastName: Text[200];
+                begin
+                    StudentTable.Reset();
+                    if StudentTable.Find('-') then begin
+                        repeat
+                            if Text.StrLen(StudentTable.LastName) > lastNameInt then
+                                lastNameInt := Text.StrLen(StudentTable.LastName);
+                            lastName := StudentTable.LastName;
+                            id := StudentTable.ID;
+                        until StudentTable.Next = 0;
+                        Message('The longetst last name is : %1 and the number of the carachters are : %2 and the id of the student is : %3', lastName, lastNameInt, id);
+                    end;
+                end;
+            }
+
 
             //non funziona bene perche non ho creato il field in tabella perche a me non mi interessa avere le ridondanze
             //E vorrei calcolare il full name in page per none salvare il fullname in database. invece ancora ho usato il
@@ -155,95 +178,7 @@ page 50110 StudentPageArash
             //     end;
             // }
         }
-
-        area(Creation)
-        {
-            Description = 'this is a Description';
-            action(helloFromAction)
-            {
-                Caption = 'Hello From Action';
-                trigger OnAction()
-                begin
-                    Message('Hello!');
-                end;
-            }
-        }
-
-        area(Navigation)
-        {
-            group(subGroup1)
-            {
-                action(helloFromsubGroup11)
-                {
-                    Caption = 'hello From subGroup 11';
-                    trigger OnAction()
-                    begin
-                        Message('Hello!');
-                    end;
-                }
-            }
-            group(subGroup2)
-            {
-                action(helloFromsubGroup21)
-                {
-                    Caption = 'hello From subGroup 21';
-                    trigger OnAction()
-                    begin
-                        Message('Hello!');
-                    end;
-                }
-            }
-
-        }
-
-        area(Reporting)
-        {
-            group(NewSubGroup)
-            {
-                Caption = 'sub Group 1';
-                group(MyGroup)
-                {
-                    action(helloFromReporting)
-                    {
-                        Caption = 'hello From Reporting';
-                        trigger OnAction()
-                        begin
-                            Message('Hello!');
-                        end;
-                    }
-                }
-            }
-
-            group(NewSubGroup2)
-            {
-                Caption = 'sub Group 2';
-                group(mysubGroup21)
-                {
-                    action(HelloFromSubGroup21Action)
-                    {
-                        Caption = 'Hello From SubGroup 21 action';
-                        trigger OnAction()
-                        begin
-                            Message('Hello!');
-                        end;
-                    }
-                }
-                group(mysubGroup22)
-                {
-                    action(HelloFromSubGroup2)
-                    {
-                        Caption = 'Hello From SubGroup 22 action';
-                        trigger OnAction()
-                        begin
-                            Message('Hello!');
-                        end;
-                    }
-                }
-            }
-
-        }
     }
-
 
     procedure FullNameCal(): Text
     var
@@ -251,16 +186,19 @@ page 50110 StudentPageArash
         Gender: Enum GenderArash;
         FullName: Text[100];
         GeneralLedgerSetup: Record "General Ledger Setup";
+    // MaleCouneter: Integer;
+    // Message: Label 'Finish total male students are (Male : %1)';
     begin
         StudentTable.Reset();
         GeneralLedgerSetup.Get();
         if (StudentTable.Find('-')) then begin
             REPEAT
                 if (StudentTable.ID = rec.ID) then begin
-
                     if StudentTable.Gender = Gender::Man then begin
                         FullName := GeneralLedgerSetup.malePrefixArash + ' ' + rec.FirstName + ' ' + rec.LastName;
+                        // MaleCouneter += 1;
                         exit(FullName);
+
                     end;
                     if StudentTable.Gender = Gender::Woman then begin
                         FullName := GeneralLedgerSetup.femalePrefixArash + ' ' + rec.FirstName + ' ' + rec.LastName;
@@ -272,6 +210,7 @@ page 50110 StudentPageArash
                     end;
                 end;
             UNTIL StudentTable.NEXT = 0;
+            // Message(Message, MaleCouneter);
         end;
     end;
 

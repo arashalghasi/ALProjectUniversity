@@ -34,6 +34,12 @@ page 50121 GradeCardArash
                     end;
                 }
 
+                field(StudentName; Rec.StudentName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Student Name';
+                }
+
                 field(ExamId; Rec.ExamId)
                 {
                     ApplicationArea = All;
@@ -56,6 +62,24 @@ page 50121 GradeCardArash
                             Message('Added') else
                             Error('The Student does not have to course to be able to do the exam');
                     end;
+                }
+
+                field(ExamDate; Rec.ExamDate)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Exam Date';
+                }
+
+                field(CourseID; Rec.CourseID)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course ID';
+                }
+
+                field(CourseName; Rec.CourseName)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Course Name';
                 }
 
                 field(Score; Rec.Score)

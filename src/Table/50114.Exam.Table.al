@@ -14,6 +14,13 @@ table 50114 ExamTableArash
             Caption = 'Course ID';
             TableRelation = CourseTableArash.ID;
         }
+
+        field(15; CourseName; Text[100])
+        {
+            Caption = 'Course Name';
+            FieldClass = FlowField;
+            CalcFormula = lookup(CourseTableArash.CourseName where(ID = field(CourseID)));
+        }
         field(20; ExamDate; Date)
         {
             Caption = 'Exam Date';
